@@ -1,0 +1,28 @@
+.top
+{
+	background: black;
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+#ins
+{
+	color: dark;
+	text-align: center;
+}
+.inst
+{
+	border: 5px solid;
+	margin-top:10px ;
+	border-radius: 10%;
+}
+.que1
+{
+	padding: 1%;
+}
+.c1
+{
+	border: 1px solid;
+	border-color: grey;
+	padding: 10px;
+}
