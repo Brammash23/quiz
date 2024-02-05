@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Entry From</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		*{
+			background-color:black ;
+			color: white;
+			border-color: white;
+
+		}
+		.form
+		{
+			border: 2px solid;
+			
+			margin-left: 250px;
+			margin-right: 350px;
+			border-color: whitesmoke;
+			margin-top: 40px;
+			padding-right: 20px;
+			font-size: 20px;
+			text-align: center;
+
+		}
+		#icon{
+    position: absolute;
+    right: 43%;
+    top: 10%;
+    border-radius: 50%;
+
+			
+			}
+			.det
+			{
+				text-align: center;
+			}
+ @media screen and (max-width:920px)
+ {
+ 			*{
+			background-color:black ;
+			color: white;
+			border-color: white;
+
+
+		}
+		.form
+		{
+			border: 2px solid;
+			height: 50px;
+			width: 300px;
+			margin-left: 250px;
+			margin-right: 350px;
+			border-color: whitesmoke;
+			
+			padding-right: 20px;
+			font-size: 13px;
+			
+
+		}
+		#icon{
+    position: absolute;
+    right: 43%;
+    top: 10%;
+    border-radius: 50%;
+    
+			
+			}
+			.det
+			{
+							}
+ 	}
+	</style>
+</head>
+<body>
+	<div class="form">
+		<div id="icon">
+			
+			
+
+		</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+         <img src="sit.png">
+ 		<form>
+
+			<label>Name</label>
+			<input type="text" name="name" id="name"required maxlength="20"><br><br><br>
+			<label>RollNo</label>
+			<input type="text" name="rollno" id="rollno" maxlength="8"><br><br><br>
+			<label>Regno</label>
+			<input type="text" name="regno" id="regno" maxlength="12"><br><br><br>
+			<label>Stream</label>
+			<select id="str">
+				<option value="B.E">Bachelor Of Engineering</option>
+				<option value="B.TECH">Bachelor of Technology</option>
+			</select>
+			<br><br><br>
+			<label>Department</label>
+			<select id="dept">
+				<option value="ECE">Electronics and Communication</option>
+				<option value="EEE">Electronics and Electrical</option>
+			</select>
+			<br><br><br>
+			<label>Subject Code</label>
+			<select id="sc">
+				<option value="21UEN901">21UEN901</option>
+				<option value="21UEN902">21UEN902</option>
+			</select>
+			<br><br><br>
+			<label>Department</label>
+			<select id="sn">
+				<option value="English for Technical">English for Technical</option>
+				<option value="English for Vocabulary">English for Vocabulary</option>
+			</select>
+			<br><br><br>
+			<label>Department</label>
+			<select id="stf">
+				<option value="Ms.A.Jansi Rani">Ms.A.Jansi Rani</option>
+				<option value="Mr.Abbul Sikkandar">Mr.Abbul Sikkandar</option>
+			</select>
+			<br><br><br>
+			<label>Section</label>
+			A<input type="radio" name="Section"  value="A">
+			B<input type="radio" name="Section"  value="B">
+			C<input type="radio" name="Section" value="C"><br><br>
+			<button id="btn" onclick="run()">Submit</button>
+
+
+
+
+
+
+
+
+
+
+
+
+		</form>
+		
+
+
+
+
+
+
+
+	</div>
+	
+
+
+	</form>
+	
+<script type="text/javascript">
+	function run() {
+	  const a = document.getElementById('dept').value;
+	  const b = document.getElementById('name').value;
+	    const c = document.getElementById('rollno').value;
+	    const d = document.getElementById('regno').value;
+	    const e = document.getElementById('str').value;
+         const f = document.getElementById('sc').value;
+          const g = document.getElementById('stf').value;
+           const h = document.getElementById('sn').value;
+           const l = document.getElementsByName('Section');
+           for (var i = 0; i < l.length; i++) {
+           	if (l[i].checked) 
+           	{
+           		localStorage.setItem('section',l[i].value);
+           	}
+           	
+           }
+           if (a.length>0 && b.length>0 && c.length>0 && d.length>0 && e.length>0 && f.length>0 && g.length>0 && h.length>0)
+            {
+            	if (f == "21UEN901" &&  g == "Ms.A.Jansi Rani" && h == "English for Technical") 
+            	{
+            		 window.open('assess.html');
+            		 window.close('index.html');
+
+            	}
+            	else if (f == "21UEN902" &&  g == "Mr.Abbul Sikkandar" && h == "English for Vocabulary") 
+            	{
+            		 window.open('assess2.html');
+            		  window.close('index.html');
+
+                }
+                else
+                {
+                	alert("Please make a Valid combination")
+                }
+
+            	
+            }
+            else
+            {
+            	alert("please enter an Compulsory Details");
+            }
+            localStorage.setItem('name',b);
+            localStorage.setItem('dept',a);
+            localStorage.setItem('rollno',c);
+            localStorage.setItem('regno',d);
+            localStorage.setItem('str',e);
+            localStorage.setItem('sc',f);
+            localStorage.setItem('stf',g);
+            localStorage.setItem('sn',h);
+            window.close("index.html");
+
+
+
+
+
+	 
+	  
+		}
+		
+
+	
+	
+</script>
+</body>
+</html>

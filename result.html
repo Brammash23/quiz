@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Result</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		*{
+			background-color:black ;
+			color: white;
+			border-color: white;
+
+		}
+		.form
+		{
+			border: 2px solid;
+			margin-left: 250px;
+			margin-right: 350px;
+			border-color: whitesmoke;
+			margin-top: 70px;
+			padding-right: 20px;
+			font-size: 30px;
+			text-align: center;
+
+
+		}
+		#icon{
+    position: absolute;
+    right: 43%;
+    top: 15%;
+    bottom: 20%;
+    border-radius: 50%;
+			
+			}
+			.det
+			{
+				text-align: center;
+			}
+@media screen and (max-width:920px)
+ {
+ 			*{
+			background-color:black ;
+			color: white;
+			border-color: white;
+
+
+		}
+		.form
+		{
+			border: 2px solid;
+			height: 50px;
+			width: 300px;
+			margin-left: 250px;
+			margin-right: 350px;
+			border-color: whitesmoke;
+			
+			padding-right: 20px;
+			font-size: 13px;
+			
+
+		}
+		#icon{
+    position: absolute;
+    right: 43%;
+    top: 10%;
+    border-radius: 50%;
+    
+			
+			}
+			.det
+			{
+							}
+ 	}
+
+	</style>
+
+</head>
+<body>
+	<div class="form">
+		<div id="icon">
+			
+			
+
+		</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+   <img src="sit.png" >
+ 		<form>
+			<label>Name:<b id="peru"></b></label>
+		<br><br><br>
+			
+			<label>Regno:<b id="reg"></b></label>
+			
+			
+			<br><br><br>
+			<label>Department:<b id="dept"></b></label>
+			
+			<br><br><br>
+			<label>Subject Code:<b id="sc"></b></label>
+			<br><br><br>
+
+			<label>Faculty:<b id="stf"></b></label>
+			<br><br><br>
+
+			<label>Subject Name:<b id="sn"></b></label>
+			
+			<br><br><br>
+			<label>Marks:<b id="result"></b></label>
+
+
+			<br><br><br>
+			<label>Result:<b id="Marks"></b></label>
+			
+			
+			
+			
+			<br><br><br>
+			<label>Section:<b id="sec"></b></label>
+			<br><br>
+
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+		</form>
+		
+
+
+
+
+
+
+
+	</div>
+	
+	
+<script type="text/javascript">
+ 
+ const a = localStorage.getItem('name');
+ 
+ const b = localStorage.getItem('dept');
+ const c = localStorage.getItem ('regno');
+ const d = localStorage.getItem('sc');
+ const e = localStorage.getItem('stf');
+ const f = localStorage.getItem('sn');
+ const g = localStorage.getItem('result');
+ const h = localStorage.getItem('section');
+ document.getElementById('peru').innerHTML = a;
+ document.getElementById('dept').innerHTML = b;
+ document.getElementById('reg').innerHTML = c;
+ document.getElementById('sc').innerHTML = d;
+ document.getElementById('stf').innerHTML = e;
+ document.getElementById('sn').innerHTML = f;
+ document.getElementById('sec').innerHTML = h;
+ const t = g*5;
+ if(t>=25)
+ {
+ 	document.getElementById('result').innerHTML = t;
+ 	document.getElementById('result').style.color = "green";
+ 	document.getElementById('Marks').innerHTML = "PASS";
+ 	document.getElementById('Marks').style.color = "green";
+ }
+
+ else if(t<25)
+{
+
+ 	document.getElementById('result').innerHTML = t;
+ 	document.getElementById('result').style.color = "red";
+ 	document.getElementById('Marks').innerHTML = "FAIL";
+ 	document.getElementById('Marks').style.color = "red";
+
+}
+window.onbeforeunload = function() {
+  localStorage.removeItem('name');
+   localStorage.removeItem('regno');
+    localStorage.removeItem('dept');
+     localStorage.removeItem('Marks');
+      localStorage.removeItem('result');
+  };
+ 
+
+ 	
+
+	
+		
+
+	
+	
+</script>
+</body>
+</html>
